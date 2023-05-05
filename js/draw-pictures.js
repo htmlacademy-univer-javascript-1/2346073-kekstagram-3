@@ -1,8 +1,8 @@
-import { generatePhotos } from './data.js';
+import { createDescriptions } from './data.js';
 
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const picturesContainer = document.querySelector('.pictures');
-const photos = generatePhotos();
+const photos = createDescriptions();
 
 const renderPhotos = () => {
   const fragment = document.createDocumentFragment();
