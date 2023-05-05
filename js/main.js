@@ -1,4 +1,4 @@
 import './util.js';
-import {arrayOfDescription} from './data.js';
+import { renderPhotos } from './render.js';
 
-arrayOfDescription();
+renderPhotos();

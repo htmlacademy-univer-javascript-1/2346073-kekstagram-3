@@ -13,14 +13,12 @@ const DESCRIPTIONS = [
 ];
 
 const DESCRIPTIONS_COUNT = 25;
-let idNumber = 1;
-let urlNumber = 1;
 
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
-const createDescription = () => ({
-  id: idNumber++ ,
-  url: `photos/${urlNumber++}.jpg`,
+const createDescription = (i) => ({
+  id: i,
+  url: `photos/${i + 1}.jpg`,
   description: getRandomArrayElement(DESCRIPTIONS),
   likes: getRandomPositiveInteger(15,200),
   comments: getRandomPositiveInteger(0, 200)
