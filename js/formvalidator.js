@@ -20,11 +20,11 @@ const validateComment = function (value) {
 };
 
 pristine.addValidator(form.querySelector('.text__hashtags'), validateHashTag,
-  'ХэшТег должен начинаться с # и содержать только цифры и буквы латинского и русского алфавитов'
+  'Хештег должен начинаться с #, включать в себя только русские и латинские символы и не превышать длины 20 символов'
 );
 
 pristine.addValidator(form.querySelector('.text__description'), validateComment,
-  'Комментарий обязателен и должен быть длиной от 20 до 140 символов'
+  'От 20 до 140 символов'
 );
 
 form.addEventListener('submit', (evt) => {
