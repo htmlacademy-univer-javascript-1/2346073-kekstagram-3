@@ -1,3 +1,4 @@
+import './form.js';
 import { checkStringLength } from './util.js';
 import { renderPhotos } from './draw-pictures.js';
 
