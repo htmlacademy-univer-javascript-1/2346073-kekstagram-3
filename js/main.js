@@ -1,4 +1,5 @@
 import './form.js';
+import './formvalidator.js';
 import { checkStringLength } from './util.js';
 import { renderPhotos } from './draw-pictures.js';
 
