@@ -1,3 +1,4 @@
+import { getRandomItem } from './util.js';
 import {getRandomPositiveInteger} from './util.js';
 
 const DESCRIPTIONS = [
@@ -14,16 +15,14 @@ const DESCRIPTIONS = [
 
 const DESCRIPTIONS_COUNT = 25;
 
-const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
-
 const createDescription = (i) => ({
   id: i,
   url: `photos/${i + 1}.jpg`,
-  description: getRandomArrayElement(DESCRIPTIONS),
+  description: getRandomItem(DESCRIPTIONS),
   likes: getRandomPositiveInteger(15,200),
   comments: getRandomPositiveInteger(0, 200)
 });
 
-const arrayOfDescription = () =>  Array.from({length: DESCRIPTIONS_COUNT}, createDescription);
+const createDescriptions = () =>  Array.from({length: DESCRIPTIONS_COUNT}, (_, index) => createDescription(index));
 
-export {arrayOfDescription};
+export {createDescriptions};
