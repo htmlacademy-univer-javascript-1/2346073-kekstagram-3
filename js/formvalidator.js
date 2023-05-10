@@ -27,8 +27,6 @@ pristine.addValidator(form.querySelector('.text__description'), validateComment,
   'От 20 до 140 символов'
 );
 
-form.addEventListener('submit', (evt) => {
-  if (!pristine.validate()) {
-    evt.preventDefault();
-  }
-});
+const getPristine = () => pristine;
+
+export {  getPristine  };
