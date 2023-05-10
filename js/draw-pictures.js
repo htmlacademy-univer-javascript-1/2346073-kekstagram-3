@@ -1,10 +1,7 @@
-import { createDescriptions } from './data.js';
-
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const picturesContainer = document.querySelector('.pictures');
-const photos = createDescriptions();
 
-const renderPhotos = () => {
+const renderPhotos = (photos) => {
   const fragment = document.createDocumentFragment();
 
   photos.forEach((photo) => {
